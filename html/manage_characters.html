@@ -1,0 +1,12 @@
+<template name="manage_characters">
+    <h2>Manage Characters</h2>
+    {{#if logged_in}}
+        {{#if my_characters}}
+            <h3>Delete Characters</h3>
+            <p class="text-error">Click to delete. There is no "undo" for this, so be certain!</p>
+            {{#each my_characters}}
+                <p><button class="btn btn-small btn-danger delete_character">{{ name }}</button></p>
+            {{/each}}
+        {{/if}}
+    {{/if}}
+</template>

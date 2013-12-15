@@ -1,0 +1,24 @@
+<template name="new_game">
+    <h1>Create a new Fate Core Game</h1>
+    {{#if logged_in}}
+    <div class="row-fluid">
+        <form id="new_game_form" class="form-horizontal" action="" role="form">
+            <div class="control-group">
+                <label class="control-label" for="inputGameName">Game Name</label>
+                <div class="controls">
+                    <input type="text" id="inputGameName">
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="controls">
+                    <button type="submit" id="create_game_button" class="btn">Create Game</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    {{else}}
+    <div class="row-fluid">
+        <p>Please log in to create a game.</p>
+    </div>
+    {{/if}}
+</template>

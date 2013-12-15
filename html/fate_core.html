@@ -1,0 +1,50 @@
+<head>
+    <title>Fate Core Game Manager</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+<div class="container-fluid">
+    {{> Fate_Core}}
+</div>
+</body>
+
+<template name="Fate_Core">
+    {{> nav}}
+    {{> main}}
+</template>
+
+<template name="main">
+    <div class="container">
+        {{#if home}}
+            {{> home}}
+        {{/if}}
+        {{#if current_game}}
+            <div class="row-fluid">
+                <div id="svg_sheet_area" class="span12"></div>
+            </div>
+        {{/if}}
+        {{#if new_game}}
+            {{> new_game}}
+        {{/if}}
+        {{#if new_character}}
+            {{> new_character}}
+        {{/if}}
+        {{#if manage_characters}}
+            {{> manage_characters}}
+        {{/if}}
+        {{#if share_or_delete_game}}
+            {{> share_or_delete_game}}
+        {{/if}}
+        {{#if current_character}}
+            {{#constant}}
+                <div class="row-fluid">
+                    <div id="svg_sheet_area" class="span12"></div>
+                </div>
+            {{/constant}}
+        {{/if}}
+        {{#if admin}}
+            {{> admin}}
+        {{/if}}
+    </div>
+</template>

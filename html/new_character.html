@@ -1,0 +1,24 @@
+<template name="new_character">
+    <h1>Create a new Fate Core Character</h1>
+    {{#if logged_in}}
+    <div class="row-fluid">
+        <form id="new_character_form" class="form-horizontal" action="" role="form">
+            <div class="control-group">
+                <label class="control-label" for="inputCharacterName">Character Name</label>
+                <div class="controls">
+                    <input type="text" id="inputCharacterName">
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="controls">
+                    <button type="submit" id="create_character_button" class="btn">Create Character</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    {{else}}
+    <div class="row-fluid">
+        <p>Please log in to create a character.</p>
+    </div>
+    {{/if}}
+</template>

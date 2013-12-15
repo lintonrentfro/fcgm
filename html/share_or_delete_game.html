@@ -1,0 +1,17 @@
+<template name="share_or_delete_game">
+    <h2>Share or Delete Games</h2>
+    <p class="text-error">
+        Click to delete. There is no "undo" for this, so be certain!
+    </p>
+    {{#if logged_in}}
+        {{#if my_games}}
+            {{#each my_games}}
+                <p><button class="btn btn-mini btn-danger delete_game">{{ name }}</button> Share Code: {{ secret_code_to_join }}</p>
+            {{/each}}
+        {{/if}}
+    {{else}}
+    <div class="row-fluid">
+        <p>Please log in to share or delete your games.</p>
+    </div>
+    {{/if}}
+</template>
